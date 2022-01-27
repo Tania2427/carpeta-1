@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <h1>Formulari de alta</h1>
+    <h2>nombre y apellido <span>*</span></h2>
+
+    <form action="/action_page.php" method="get">
+
+<p>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="fname">nombre</label><br></p>
+      <p>  <label for="lname">primer cognom:</label><br>
+        <input type="text" id="lname" name="lname"></p>
+
+        <label for="lname">segon cognom:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        
+
+        <h3>Direccion <span>*</span></h3>
+<p>
+        <label for="fname">calle,numero,piso,puerta:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+    </p>
+       <label for="fname">codigo postal</label><br>
+        <input type="text" id="fname" name="fname">
+      
+        <label for="fname">municipio</label>
+        <input type="text" id="fname" name="fname">
+      <br>
+
+      <p>  <label for="fname">provincia</label><br>
+        <select id="cars" name="cars">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+         
+        <input type="text" id="fname" name="fname">
+        <label for="fname">pais</label>
+        <input type="text" id="fname" name="fname"><br>
+
+        <h4>email</h4>
+        <label for="email">Adreça de correo:</label><br>
+        <input type="email" id="email" name="email">
+
+        <h5>Telefon <span>*</span></h5>
+        <label for="phone">fijo</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">>
+        <label for="phone">movil</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">><br>
+       
+        <h6>
+            <button type="button">Dame de alta</button>
+        </h6>
+
+
+    </form>
+<style>
+    span {
+        color: red;
+    }
+    input {
+        background-color: silver;
+    }
+    label {
+        color: silver;
+    }
+</style>
+
+</body>
+
+</html>
