@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/style5.css">
 </head>
 
 <body>
@@ -17,8 +17,19 @@
     <form action="/action_page.php" method="get">
 
 <p>
+    <table style="width: 100px;">
+    <tr>
+        <th>
         <input type="text" id="fname" name="fname"><br>
-        <label for="fname">nombre</label><br></p>
+        <label for="fname">nombre</label><br></p></th>
+        <th>
+            <h3>Direccion <span>*</span></h3>
+            <p>
+                    <label for="fname">calle,numero,piso,puerta:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+        </th>
+    </tr>
+</table>
       <p>  <label for="lname">primer cognom:</label><br>
         <input type="text" id="lname" name="lname"></p>
 
@@ -26,10 +37,7 @@
         <input type="text" id="lname" name="lname"><br><br>
         
 
-        <h3>Direccion <span>*</span></h3>
-<p>
-        <label for="fname">calle,numero,piso,puerta:</label><br>
-        <input type="text" id="fname" name="fname"><br>
+
     </p>
        <label for="fname">codigo postal</label><br>
         <input type="text" id="fname" name="fname">
@@ -66,17 +74,7 @@
 
 
     </form>
-<style>
-    span {
-        color: red;
-    }
-    input {
-        background-color: silver;
-    }
-    label {
-        color: silver;
-    }
-</style>
+
 
 </body>
 

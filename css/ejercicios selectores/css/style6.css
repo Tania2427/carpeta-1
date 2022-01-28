@@ -1,0 +1,15 @@
+.numeros {
+    background-color: green;
+    color: blue;
+    border-bottom:  solid black;
+    margin: 50px;
+    width: 400px;
+    height: 150px;
+    padding: 20px;
+    border-style: dotted;
+    
+}
+
+h2 {
+    text-align: center;
+}
