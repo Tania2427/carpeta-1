@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    size:20;
+}
+.encabezado {
+ 
+    background-color: yellow;
+    padding: 30px;
+    text-align:center;
+    font-size: 45px;
+
+}
+
+.caixa1 {
+    float: left;
+    background-color: lightsteelblue;
+    width: 20px;
+    padding: 10px;
+    height: 200px;
+   
+}
+
+.caixa2 {
+    float:left;
+    background-color: lightseagreen;
+    width: 60px;
+    padding: 10px;
+    height: 200px;
+
+}
+
+.caixa3 {
+    float: right;
+    background-color: lightsalmon;
+    width: 20px;
+    padding: 10px;
+    height:200px;
+    
+}
+.cubos:after{
+    content: "";
+    display:table;
+    clear:both;
+}
+
+.caixa4 {
+   
+    background-color: lightpink;
+    padding: 30px;
+    text-align: center;
+}
+
