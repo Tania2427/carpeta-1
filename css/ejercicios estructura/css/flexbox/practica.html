@@ -15,7 +15,7 @@
         <div class="item item3">03</div>
         <div class="item item4">04</div>
         <div class="item item5">05</div>
-        <div class="item item6">06</div>
+       
     </div>
 
     <style>
@@ -26,9 +26,9 @@
         .container {
             background-color: yellow;
             display: flex;
-            height:200px;
-           flex-wrap: wrap;
-           align-content: space-between;
+           
+           flex-wrap: row  nowrap;
+          
 
         }
 
@@ -39,7 +39,21 @@
             font-size: 1em;
             font-family: sans-serif;
             font-weight: bold;
+            width:450% ;
 
+        }
+        .item1 {
+            order: 2;
+         flex-shrink: 2;
+
+        }
+        .item2 {
+            order: 1;
+           flex-shrink: 1;
+        }
+        .item3 {
+            order: 4 ;
+          flex-shrink: 1;
         }
     </style>
 </body>
