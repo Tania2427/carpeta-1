@@ -10,7 +10,7 @@
 }
 
 .header {
-    background: #ea5455;
+    background: #1f6cb0;
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
@@ -79,7 +79,9 @@ nav ul a i {
 
 }
 .texto-principal {
-    background-image: url("/css/ejercicios");
+    background-image: url("images/principal.jpg");
+   width: 300%;
+   height: 250PX;
 }
 
 
@@ -87,8 +89,7 @@ nav ul a i {
 .section {
     background: yellow;
     display: flex;
-    flex-direction: row nowrap;
-
+    flex-direction: row wrap;
 
 }
 
@@ -97,19 +98,35 @@ nav ul a i {
     flex: 2 1 auto;
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
+    height: 60px;
 
 }
 
 .articulo {
     background: #1f6cb0;
-    flex: 1 1 auto;
-    height: 30%;
+    flex: 1 1 50%;
+    width: 50%;
+    height: 30px;
+}
+.articulo1 {
+    width: 100%;
+    height: 90px;
+    
+}
+.articulo2 {
+   width: 100%;
+   height:90px ;
+}
+.articulo3 {
+    width: 100%;
+    height: 90px;
+}
+.articulo4 {
+    width:100%;
+    height: 90px;
 }
 
-.navegacion {
-    background: #1f6cb0;
-    flex: 1 1 100%;
-}
 
 .aside {
     background: #ea5455;
@@ -127,6 +144,9 @@ nav ul a i {
     background: #000;
     display: flex;
     justify-content: center;
+}
+.publicidad {
+
 }
 
 .pie {
