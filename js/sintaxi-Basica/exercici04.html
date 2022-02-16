@@ -35,6 +35,20 @@ console.log (Math.ceil(4.9));
 console.log (Math.floor(4.2));
 console.log (Math.floor(-4.2));
 console.log (Math.pow(8,2));
+
+/* Fes un programa que demani dos números a l’usuari i retorni un valor aleatori 
+enter comprès entre aquests dos números, ambdós inclosos*/
+
+let first_number = parseInt ( prompt ("insereix el primer nombre"));
+let second_number = parseInt ( prompt ("insereix el segon nombre"));
+let randon_number =0;
+
+//1 manera de fer-ho
+
+let min_number= Math.min (first_number,second_number );
+let max_number= Math.max (first_number,second_number );
+random_number= Math.floor ( Math.random () * (max_number - min_number )) + min_number
+console.log ("manera+eficient...primer =" +min_number );
     </script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //exercici 1//
+        let hoy = new Date("2022,02,16");
+        let nacimiento = new Date("1983,01,26");
+        var transcurso = hoy.getTime(new Date) - nacimiento.getTime(new Date);
+        console.log(transcurso);
+        document.write (transcurso);
+        var dias = ((((hoy - nacimiento) / 1000) / 60) / 60) / 24;
+        var meses = parseInt((dias % 365) / 30);
+        var anios = parseInt(dias / 365);
+        dias = parseInt((dias % 365) % 30);
+
+        document.write("Hoy es → " + hoy);
+        document.write("<br />Fecha de nacimiento → " + nacimiento);
+        document.write("<br /> " + anios + " años, " + meses + " meses, " + dias + " días.");
+        console.log("Hoy es → " + hoy);
+        console.log("<br />Fecha de nacimiento → " + nacimiento);
+      console.log("<br /> " + anios + " años, " + meses + " meses, " + dias + " días.");
+
+      //exercici 2//
+      let currentTime = new Date();
+      console.log ("Data"+currentTime.toString ());
+      let hores= currentTime.setHours(26);
+      console.log ("26h"+hores);
+      let minuts= currentTime.setminutes(65);
+      console.log("65'"+ minuts);
+      let dies=currentTime.setDate(35);
+      console.log (dies);
+
+      //exercici 3//
+
+      //exercici 4//
+      let data = new Date ( 1714,09,11); 
+      let mes = fecha.getMonth ();
+      let any= fecha.getFullYear();
+      let dia= fecha.getDate();
+      
+      console.log(fecha);
+      console.log(mes);
+      console.log (any);
+
+      if(mes=="0") {nomMes="enero";}
+      if(mes=="1") {nomMes="febrero";}
+      if(mes=="2") {nomMes="marzo";}
+      console.log ( dia+"de" +nomMes+"de"+any )
+
+    </script>
+</body>
+
+</html>
