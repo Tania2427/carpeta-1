@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=" initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Declara una variables anomenada esCorrecte, assigna-li true o false. Utilitza un
+condicional per veure el seu valor */
+
+        let esCorrecte = true;
+
+        if (esCorrecte === true) {
+            console.log(' true')
+        } else {
+            console.log('false')
+        }
+
+        //Declara i assigna dos valors booleans. Programa els següent escenaris://
+        /*a. Escenari 1: Si tots dos valors són certs, el resultat hauria de ser cert. En
+        la resta de casos ha de ser Fals.*/
+
+        let numero1 = 4;
+        let numero2 = 5;
+        let resultado = (numero1 == numero2);
+        resultado = false;
+        if (resultado) {
+            console.log('son cert')
+        } else {
+            console.log('fals')
+        }
+
+        let entero1 = "true";
+        let entero2 = "false";
+
+        if (entero1 && entero2) {
+            console.log("cert")
+        } else {
+            console.log("fals")
+        }
+        /*b. Escenari 2: Si un dels dos valors és certs, el resultat hauria de ser cert.
+        En la resta de casos ha de ser Fals.*/
+
+        let valor1 = "cert";
+        let valor2 = "fals";
+
+        if (valor1 || valor2) {
+            console.log("verdadero")
+        } else {
+            console.log("falso")
+        }
+
+        /*Analitza les següents expressions lògiques. Mostra per pantalla el seu valor i
+        raona el seu resultat.
+        b) 2 < 12*/
+
+        let b = 2 < "12";
+        console.log(b);
+
+        // c)
+        let c = "2" < "12";
+        console.log(c);
+
+        //d)
+        let d= !("2"<"12");
+        console.log (d);
+
+        //e
+        let e= ((2<"12") && ( 2 =="2"));
+        console.log (e);
+        //f
+        let f =("2"< "12")|| (2<12); 
+
+        //g
+        let g = (2<"12")&&(2<12);
+        console.log(g);
+        
+    </script>
+
+</body>
+
+</html>
