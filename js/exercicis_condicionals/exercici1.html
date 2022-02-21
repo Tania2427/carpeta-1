@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=" initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Imagina’t que vols fer el pagament del carrito de la compra.
+Donades 2 variables totalCarrito, cashDisponible, comprova si tens prou cash
+per pagar el total del carret.*/
+
+const totalCarrito= 18;
+const cashDisponible=22;
+
+if ( totalCarrito <= cashDisponible) {
+    console.log ("tiene sufiente dinero para pagar");
+} else {
+    console.log ("no tiene suficiente para pagar");
+}
+ 
+if ( totalCarrito >= cashDisponible) {
+    console.log ("tiene sufiente dinero para pagar");
+} else {
+    console.log ("no tiene suficiente para pagar");
+}
+
+if ( totalCarrito == cashDisponible) {
+    console.log ("tiene sufiente dinero para pagar");
+} else {
+    console.log ("no tiene suficiente para pagar");
+}
+
+// exercici 2//
+let rol= "admin";
+
+if ( rol=="admin") {
+    console.log ("el usuario puede editar,eliminar y ver toda la informacion");
+} else if ( rol=="editor") {
+    console.log ("el usuario puede editar todos los registros");
+} else if (rol== "autor") {
+    console.log ("el usuario solo puede registrar usuarios");
+} else {
+    console.log ("el usuario es visitante, solo puede ver la informacion");
+}
+//
+const usuario=false;
+const puedepagar=false;
+if ( usuario==true && puedePagar==true) {
+    alert ("si puede pagar pq tiene un DNI correcte i te diners a la targeta");
+} else {
+    alert ("no puede pagar");
+}
+
+// escenario 1:el usuario no puede hacer la compra
+
+let usuarioDni = false;
+let puedePagar = false;
+let usuariMajorEdat= false;
+let edat=25;
+
+if ( usuarioDni==true && puedePagar==true && edat>=18) {
+    alert ("si puede pagar,te un DNI correcte, te diners a la targeta i es major d'edat");
+
+} else if (puedePagar== false) {
+    alert ("ho sento molt pero no te diners");
+} else if (usuariMajorEdat==false ){
+    alert("ho sento pero no tens la edat per compra");
+} else {
+    alert ("el usuari no es correcte")
+}
+
+    </script>
+</body>
+</html>
