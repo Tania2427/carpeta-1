@@ -1,77 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content=" initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         /*Imagina’t que vols fer el pagament del carrito de la compra.
 Donades 2 variables totalCarrito, cashDisponible, comprova si tens prou cash
 per pagar el total del carret.*/
 
-const totalCarrito= 18;
-const cashDisponible=22;
+        const totalCarrito = 18;
+        const cashDisponible = 22;
 
-if ( totalCarrito <= cashDisponible) {
-    console.log ("tiene sufiente dinero para pagar");
-} else {
-    console.log ("no tiene suficiente para pagar");
+        if (totalCarrito <= cashDisponible) {
+            console.log("tiene sufiente dinero para pagar");
+        } else {
+            console.log("no tiene suficiente para pagar");
+        }
+
+        if (totalCarrito >= cashDisponible) {
+            console.log("tiene sufiente dinero para pagar");
+        } else {
+            console.log("no tiene suficiente para pagar");
+        }
+
+        if (totalCarrito == cashDisponible) {
+            console.log("tiene sufiente dinero para pagar");
+        } else {
+            console.log("no tiene suficiente para pagar");
+        }
+
+        // exercici 2//
+        let rol = "admin";
+
+        if (rol == "admin") {
+            console.log("el usuario puede editar,eliminar y ver toda la informacion");
+        } else if (rol == "editor") {
+            console.log("el usuario puede editar todos los registros");
+        } else if (rol == "autor") {
+            console.log("el usuario solo puede registrar usuarios");
+        } else {
+            console.log("el usuario es visitante, solo puede ver la informacion");
+        }
+        /*exercici3 Quina és la millor estructura de control per diferenciar les funcionalitats de les 
+        formes de pagament d’una compra */
+
+        const metodoPago = "efectivo";
+
+        switch (metodoPago) {
+            case "efectivo":
+                console.log("pagaste con" + metodoPago + "sdgf" + "ff");
+                console.log("pagaste con $ (metodoPago )");
+                break;
+            case "cheque":
+                console.log("pagaste con $ (metodoPago) revisaremos tenga primero fondos");
+                break;
+            case "targeta":
+                console.log("pagaste con $(metodoPago)");
+        }
+
+        /*exercici4er un pagament s’han de donar TOTES les opcions:
+        1. Que tingui cash
+        2. Que la compra sigui més gran que 100€*/
+
+        const compra = 100;
+        const cash = 150;
+        const totalCarrito = 150;
+
+        if (cash >= totalCarrito && totalCarrito > compra) {
+            console.log("tindra diners per pagar");
+        } else {
+            console.log("no tendra dinero");
+        }
+
+        //exercici5 Fes l’anterior exercici fent servir l’operador ternari
+
+
+        console.log(cash >= totalCarrito && totalCarrito);
+
+
+
+        /*exerci6  Demana una nota (número). Mostra qualificació segons nota:
+              0-3: Mol deficien */
+
+        let nota = 4;
+
+        switch (true) {
+            case (nota >= 0 && nota < 3):
+                alert
+                break;
+            case 10:
+            case 9:
+                calification = "sobresaliente";
+                break;
+            case 8:
+            case 7:
+                calification = ""
+
+//exercici7 //
+const age= "18";
+if ( age ===18) console.log ("you just became an adullt  :D(===)");
+
+
+//exercici 8//
+
+let efectivo=300;
+let credito= 400;
+let disponible= efectivo + credito;
+let totalCarrito= 700;
+
+if ( efectivo >= totalCarrito || credito > totalCarrito) {
+    console.log ("puedes pagar con efectivo o credito");
+} else if (disponible >= totalCarrito){
+    console.log ("paga con ambos");
+}else {
+    console.log ("no puede pagar");
 }
- 
-if ( totalCarrito >= cashDisponible) {
-    console.log ("tiene sufiente dinero para pagar");
-} else {
-    console.log ("no tiene suficiente para pagar");
-}
 
-if ( totalCarrito == cashDisponible) {
-    console.log ("tiene sufiente dinero para pagar");
-} else {
-    console.log ("no tiene suficiente para pagar");
-}
 
-// exercici 2//
-let rol= "admin";
+                let = false;
+                const puedepagar = false;
+                if (usuario == true && puedePagar == true) {
+                    alert("si puede pagar pq tiene un DNI correcte i te diners a la targeta");
+                } else {
+                    alert("no puede pagar");
+                }
 
-if ( rol=="admin") {
-    console.log ("el usuario puede editar,eliminar y ver toda la informacion");
-} else if ( rol=="editor") {
-    console.log ("el usuario puede editar todos los registros");
-} else if (rol== "autor") {
-    console.log ("el usuario solo puede registrar usuarios");
-} else {
-    console.log ("el usuario es visitante, solo puede ver la informacion");
-}
-//
-const usuario=false;
-const puedepagar=false;
-if ( usuario==true && puedePagar==true) {
-    alert ("si puede pagar pq tiene un DNI correcte i te diners a la targeta");
-} else {
-    alert ("no puede pagar");
-}
+                // escenario 1:el usuario no puede hacer la compra
 
-// escenario 1:el usuario no puede hacer la compra
+                let usuarioDni = false;
+                let puedePagar = false;
+                let usuariMajorEdat = false;
+                let edat = 25;
 
-let usuarioDni = false;
-let puedePagar = false;
-let usuariMajorEdat= false;
-let edat=25;
+                if (usuarioDni == true && puedePagar == true && edat >= 18) {
+                    alert("si puede pagar,te un DNI correcte, te diners a la targeta i es major d'edat");
 
-if ( usuarioDni==true && puedePagar==true && edat>=18) {
-    alert ("si puede pagar,te un DNI correcte, te diners a la targeta i es major d'edat");
-
-} else if (puedePagar== false) {
-    alert ("ho sento molt pero no te diners");
-} else if (usuariMajorEdat==false ){
-    alert("ho sento pero no tens la edat per compra");
-} else {
-    alert ("el usuari no es correcte")
-}
-
+                } else if (puedePagar == false) {
+                    alert("ho sento molt pero no te diners");
+                } else if (usuariMajorEdat == false) {
+                    alert("ho sento pero no tens la edat per compra");
+                } else {
+                    alert("el usuari no es correcte")
+                }
+            }
     </script>
 </body>
+
 </html>
