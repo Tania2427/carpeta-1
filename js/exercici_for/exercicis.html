@@ -39,7 +39,7 @@ diferent que al de les columnes.*/
         var numc = 5;
         for (var i = 0; i < requiredNum; i++)
 
-     //Fes un programa que demani un número i calculo la seva taula de multiplicar//
+            //Fes un programa que demani un número i calculo la seva taula de multiplicar//
 
             var num = window.prompt("insereix un numero");
 
@@ -47,31 +47,46 @@ diferent que al de les columnes.*/
             document.write(num + "x" + i + "=" + num * i);
         }
 
-        /*Recorre el següent objecte, mostrant per pantalla el nom del producte 
-const carrito = [{
-id: 1,
-producto: 'Libro'
-}*/
-let frase=prompt("esto es una frase"); 
-let arrayFrase= frase.split(",");
-for (let i = 0; i < arrayFrase.length; i++) {
-  const element= arrayFrase [i];
-  document.write ("<p>"+element + "<p>")
-}
+        //exercici5 Codifiqueu un programa que permeti carregar una frase per teclat.
 
-/*{
-id: 2,
-producto: 'Camisa'
-}*/
+        let frase = prompt("esto es una frase");
+        let arrayFrase = frase.split(",");
+        for (let i = 0; i < arrayFrase.length; i++) {
+            const element = arrayFrase[i];
+            document.write("<p>" + element + "<p>")
+        }
+        /*Codifiqueu un programa amb un bucle for que permeti comptar el numero de
+        vegades que surt una lletra en una frase*/
 
+        var frase = "hola esto es una prueba ";
+        var llargFrase = frase.length; // el número de caracteres lo obtenemos mediante la longitud del mismo
+        console.log(llargFrase);
+        let lletra = "a";
+        let contador = 0;
 
-/*{
-id: 3,
-producto: 'Disco'
-}
-*/
+        for (i = 0; i < frase.length; i++) {
+            if (frase.charAt(i) === lletra) {
+                contador = contador + 1;
+                console.log(contador + 1)
+            }
+        }
+        console.log(contador);
 
+        //Recorre el següent objecte, mostrant per pantalla el nom del producte
 
+        const carrito = [{
+                    id: 1,
+                    producto: 'Libro'
+                },
+                {
+                    id: 2,
+                    producto: 'Camisa'
+                },
+                {
+                    id: 3,
+                    producto: 'Disco'
+                }];
+            
     </script>
 </body>
 
