@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=" initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Fes un programa que vagi demanant diferents paraules per pantalla ( fes us del
+prompt ), quan introdueixis la paraula Fi, deixaràs de demanar més paraules. I
+mostraràs per pantalla el número de paraules que has introduït.*/
+
+let word="";
+let contador=0;
+const password="fin";
+const lista= [];
+
+do {
+    word=prompt ("introduce una palabra");
+    lista.push(word)
+    contador++
+} while (word !==password);
+console.log ("has introducido ${contador} palabras")
+console.log (lista);
+document.write ("has introiducido ${contador} palabras"+ "<br>")
+document.write(lista)
+
+    </script>
+</body>
+</html>
