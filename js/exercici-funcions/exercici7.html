@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Defineix una frase e implementar les funcions següents:
+a. Funció per Imprimir la primera meitat dels caràcters de la cadena.*/
+
+        let text1 = "me gustan los helados";
+        text1.lenght; //encuentra la longitud de la cadena
+
+        function imprimart(text1) {
+            console.log(text1.slice(0, 8)); //extraer cadena
+        }
+
+        imprimart(text1);
+
+        //b. Funció per Imprimir el darrer caràcter.
+
+
+        //c. Funció per Imprimir-ho en forma inversa.
+
+        function darrer(text1) {
+            let reversedText = text1.split(' ').reverse().join(' ');
+
+            // string.split("") : dividir una cadena en cada carácter y convertirla en una matriz
+            // string.split("").reverse() // va a invertir el array
+            // string.split("").reverse().join("") : Unir cada item en el array
+            console.log(reversedText); // Imprime "txet ym si sihT"
+
+            //d. Funció per Imprimir cada caràcter del String separat amb un guió.
+            function guio(text1) {
+                let fraseguio = text1.split("").join("-")
+                console.log(fraseiguio);
+            }
+            guio(text1);
+
+            //e. Funció per Imprimir la quantitat de vocals sense accents emmagatzemades.//
+            //definiremos un contador, el cual lleve la cuenta de las vocales de la palabra
+            //recorrer la palabra, mediante un bucle for y controlando el tamaño de la palabra mediante el método .length()
+            //el método .charAt() nos devolverá el carácter de la posición que estamos recorriendo. Así que comprobaremos si dicho carácter es una de las vocales (a, e, i, o, u).
+
+            function contar_vocales(text1) {
+                for (let f = 0; f < text1.length(); f++) {
+                    if (texto1.charAt(f).toLowerCase() == 'a' || text1.charAt(f).toLowerCase() == 'e' || text1.charAt(f).toLowerCase == 'i' || 
+                            text1.charAt(f).toLowerCase() == 'o' || text1.charAt(f).toLowerCase() == 'u') {
+                        contador++;
+                    }
+                
+                }}}
+        //valor del contador.
+        contador = 0;
+      
+    </script>
+</body>
+
+</html>

@@ -11,13 +11,17 @@
         /*Programa en JavaScript una funció on se li passi dos arguments: string1 -frase- i
 string2-frase-, i retorna quants caràcters hi ha en total = string1 + string2.*/
 
-var string1= parseInt (" estamos bien ");
-var string2= parseint ("hola que tal");
-total= string1 + string2;
-
-function (total) {
-    
+var string1= " estamos bien ";
+var string2= "hola que tal";
+var total;
+function numCaracters(string1,string2){
+    let total= string1.length+string2.length;
+    return total;
 }
+
+totalCaracteres=numCaracters(string1,string2);
+console.log(numCaracters(string1,string2));
+
     </script>
 </body>
 </html>

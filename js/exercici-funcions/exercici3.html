@@ -19,17 +19,26 @@
         result = menor(num1, num2)
         console.log("valor mes petit" + result);
 
-
-
         function menor(num1, num2) {
 
             if (num1 < num2) {
-
                 return num1;
-            } else if (num1 > num2) {
+            } else {
                 return num2;
             }
         }
+function comparavalors (val1,val2) {
+        //segona manera de fer-ho
+        let menor= val1<val2 ? val1:val2;
+        return menor;
+
+        //tercera manera de fer-ho
+        menor=match.min( val1,val2)
+        return menor;
+}
+        var menor;
+        menor=comparavalors (5,1);
+        document.write("el valor mes petit"+ menor);
     </script>
 </body>
 
