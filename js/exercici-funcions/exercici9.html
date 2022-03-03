@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Fes un programa amb les seves funcions que determini si un password és segur. 
+Per exemple, un password segur ha de complir les següents condicions:
+Ha de contenir almenys 8 números.*/
+
+var password=" hjk456SDl";
+
+
+function seguridad_clave (password){  
+    if (password.lenght() <= 8){
+      seguridad +=10;
+    }else{
+        return false;
+    }
+}
+
+console.log ("true" );
+
+// Ha de contenir almenys una majúscula.
+
+// Ha de contenir almenys una minúscula.
+/* Ha de contenir un número.
+Almenys ha de contenir un caràcter especial.
+Pots fer servir una funció per cada comprovació.*/
+/*
+function esSegura ( password) {
+    if (password.length() > 8){
+        let mayuscula=false;
+        let numero=false;
+
+        for (int i=0; i<password.lenght(); i++) {
+            c=password.charAt (i);
+        }
+    }else {
+        return false;
+    }
+}
+var password;
+System.out.println("Ingrese una contraseña: ");//el usuario nos dice la contraseña
+password=lector.next();*/
+
+    </script>
+</body>
+</html>
