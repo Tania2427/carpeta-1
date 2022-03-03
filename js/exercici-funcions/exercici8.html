@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Fes una funció que donat un número de DNI, calculi si la lletra és correcta. Tingues 
+present que la lletra del DNI es calcula en dos passos:
+a. Calcular el mòdul del número del DNI respecte 23:El cálculo de la letra del Documento Nacional de Identidad (DNI) se basa en obtener el resto de la división entera del número de DNI entre el número 23. A partir del resto de la división, se obtiene la letra seleccionándola dentro de un array de letras.*/
+        //El array de letras es:
+        var letras = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R',
+            'S', 'T', 'U', 'V', 'W'
+        ];
+
+        var numero = prompt("Introduce tu número de DNI (sin la letra)");
+        var letra = prompt("Introduce la letra de tu DNI (en mayúsculas)");
+        letra = letra.toUpperCase();
+
+        if (numero < 0 || numero > 99999999) { //compruebe si el número es menor que 0 o mayor que 99999999.
+            console.log("El número proporcionado es válido");
+        } else {
+            var letraCalculada = letras[numero % 23];
+            if (letraCalculada != letra) {
+                alert("La letra o el número proporcionados no son correctos");
+            } else {
+                alert("El número de DNI y su letra son correctos");
+
+
+                /*b. El resultat de l’operació anterior ha de correspondre a la posició del següent string:
+                var lletres =”TRWAGMYFPDXBNJZSQVHLCKE”;*/
+                var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
+                    'H', 'L', 'C', 'K', 'E', 'T'
+                ];
+
+                var numero = prompt("Introduce tu número de DNI (sin la letra)");
+                var letra = prompt("Introduce la letra de tu DNI (en mayúsculas)");
+                letra = letra.toUpperCase();
+
+                if (numero < 0 || numero > 99999999) { //compruebe si el número es menor que 0 o mayor que 99999999.
+                    console.log("El número proporcionado es válido");
+                } else {
+                    var letraCalculada = letras[numero % 23];
+                    if (letraCalculada != letra) {
+                        alert("La letra o el número proporcionados no son correctos");
+                    } else {
+                        alert("El número de DNI y su letra son correctos");
+
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
