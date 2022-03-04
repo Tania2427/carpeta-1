@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       //afegir elements:push
+       //  creamos un carrito de compra
+const carrito = [];
+// Añadir un elemento al carrito...
+const producto = {
+nombre: 'ropa de vestir',
+precio: 100
+}
+// Añadir OTRO elemento
+const producto2 = {
+nombre: 'Televisión',
+precio: 1000
+}
+carrito.push(producto);
+carrito.push(producto2);
+
+//unshift():Afegeix l’element al inici del array
+
+carrito.unshift(producto2);
+console.log(carrito);
+
+//pop():esborra l’últim element de l’array.
+
+carrito.pop();
+console.log(carrito);
+
+//shift():Elimina el primer element.
+//splice():Permet eliminar elements interns d’un array
+carrito.splice(1,0);
+carrito.splice(1,2);
+console.log(carrito);
+
+//forEach():Aquest mètode recorre element a element l‘array.
+const carrito1 = [
+{ nombre: 'Monitor 20 Pulgadas', precio: 500},
+{ nombre: 'Televisión 50 Pulgadas', precio: 700},
+{ nombre: 'Tablet ', precio: 300},
+{ nombre: 'Audifonos', precio: 200},
+{ nombre: 'Teclado', precio: 50},
+{ nombre: 'Celular', precio: 500},
+]
+// Recorrer un array de la forma tradicional y mostrar su contenido...
+for(let i = 0; i < carrito1.length; i++ ){
+console.log("articulo:" + carrito1[i].nombre + "Precio: $ " +
+carrito1[i].precio);
+}
+// ForEach
+carrito.forEach( function(producto) {
+console.log("articulo:" + producto.nombre + "Precio: $ " +
+producto.precio);
+})
+/*map()
+Muy similar al forEach existe un array metod llamado map, la diferencia es que map te
+crea un array nuevo...*/
+const nuevoArray = carrito.map( function(producto) {
+return "articulo:" + producto.nombre + "Precio: $ " +
+producto.precio;
+})
+console.log(carrito);
+console.log(nuevoArray);
+ 
+   </script>
+</body>
+</html>
