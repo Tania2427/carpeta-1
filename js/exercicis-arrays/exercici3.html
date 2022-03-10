@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content=", initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        /*Donat el següent array d’objectes
-const carrito = [{
-nombre: 'Monitor 20 Pulgadas',
-precio: 500
-},
-{
-nombre: 'Televisión 50 Pulgadas',
-precio: 700
-},
-{
-nombre: 'Tablet',
-precio: 300
-},
-{
-nombre: 'Audifonos',
-precio: 200
-},
-{
-nombre: 'Teclado',
-precio: 50
-},
-{
-nombre: 'Celular',
-precio: 500
-},
-{
-nombre: 'Bocinas',
-precio: 300
-},
-{
-nombre: 'Laptop',
-precio: 800
-},
-];*/
+        //Donat el següent array d’objectes
+        const carrito = [{
+                nombre: 'Monitor 20 Pulgadas',
+                precio: 500
+            },
+            {
+                nombre: 'Televisión 50 Pulgadas',
+                precio: 700
+            },
+            {
+                nombre: 'Tablet',
+                precio: 300
+            },
+            {
+                nombre: 'Audifonos',
+                precio: 200
+            },
+            {
+                nombre: 'Audifonos',
+                precio: 50
+            },
+            {
+                nombre: 'Celular',
+                precio: 500
+            },
+            {
+                nombre: 'Bocinas',
+                precio: 300
+            },
+            {
+                nombre: 'Laptop',
+                precio: 800
+            },
+        ];
+        //Mostrat tots els productes del carrito.
+        for (let i = 0; i < carrito.lenght; i++) {
+            if (carrito[i].precio > 300) {
+                console.log("producte:" + carrito[i].nombre + "preu:" + carrito[i].precio + "€")
+
+            }
+        }
+//Mostrar el total a pagar del carrito.
+        let resultado=carrito.reduce(total,producto) = total+producto.precio,0);
     </script>
 </body>
+
 </html>

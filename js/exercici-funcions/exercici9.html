@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content=", initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -26,27 +26,35 @@ function seguridad_clave (password){
 console.log ("true" );
 
 // Ha de contenir almenys una majúscula.
+const upperCase= [A-Z]/g;
+if (upperCase.test (password)){
+   
+} else {
+    window.alert ("password no conte majuscules!");
+  
+}
 
 // Ha de contenir almenys una minúscula.
-/* Ha de contenir un número.
+
+const lowerCase=[a-z]/g;
+if (lowerCase.test (password)) {
+    
+} else {
+    window.alert("password no conte minuscules!");
+   
+}
+
+var password="123131";
+var esValidlog=validaNum(password);
+var esValidMaj=conteMajuscula(password);
+var esValidMin=conteMinuscula(password);
+var esValidum=conteNumero(password);
+var esValiEsp=conteCaracter (password);
+
+    /* Ha de contenir un número.
 Almenys ha de contenir un caràcter especial.
 Pots fer servir una funció per cada comprovació.*/
-/*
-function esSegura ( password) {
-    if (password.length() > 8){
-        let mayuscula=false;
-        let numero=false;
 
-        for (int i=0; i<password.lenght(); i++) {
-            c=password.charAt (i);
-        }
-    }else {
-        return false;
-    }
-}
-var password;
-System.out.println("Ingrese una contraseña: ");//el usuario nos dice la contraseña
-password=lector.next();*/
 
     </script>
 </body>

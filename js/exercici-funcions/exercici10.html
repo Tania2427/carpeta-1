@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Simula un Captcha senzill de 5 caràcters ( amb lletres minúscules i números ) amb
+JAVASCRIPT. El captcha el pots generar fent ús random i de la següent variable:*/
+        function genera_captcha() {
+            var captcha = "";
+            var captchaChars = "123456789abcdfghijkl";
+
+
+            console.log(numRandom);
+            for (i = 0; i < 5; i++) {
+                var numRamdom = Math.floor(Math.random(captcha) * captchaChars.length);
+                var chatRandom = captchachars.charAt(numRandom);
+                captcha+=chatRandom;
+                //console.log(chatRandom);
+            }
+            console.log(captcha);
+        }
+        function validaCaptcha(newCaptcha,params){
+            if (newCaptha==params){
+                window.alert("corecte!");
+            }else {
+                window.alert("incorrecye:(");
+            }
+        }
+        genera_captcha();
+        var newCaptcha=generaCaptcha();
+        var CaptchaUsu=window.promt("introdueix el capcha:"+newCaptcha+":");
+        validaCaptcha(captcha,captchaUsu);
+        
+    </script>
+</body>
+
+</html>
