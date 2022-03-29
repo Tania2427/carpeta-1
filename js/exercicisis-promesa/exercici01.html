@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* Donada la següent promesa.Fent servir promeses, agrega cada 3 segons un país: Alemania, Francia, Inglaterra,
+Italia. Capturar errors no controlats.
+const paises = [];
+const nuevoPais = pais => new Promise( resolve => {
+setTimeout(() => {
+paises.push(pais);
+resolve(`Agregado: ${pais}`)
+}, 3000);
+});
+// crida una promesa
+nuevoPais("Alemania").then(function(result){
+    console.log(result);
+    console.log (paises);
+    return nuevoPais("Inglaterra");
+}).catch(function (error) {
+console.log(error);
+
+})
+.then (result => {
+    console.log(result);
+    console.log (paises);
+    return nuevoPais("Francia");
+})*/
+
+/*exercici2. Donada la següent promesa.
+function calculDescuento() {
+console.log('Aplicando el Descuento...');
+return true;
+}
+const aplicarDescuento = new Promise((resolve, reject) => {
+if(calculDescuento()) {
+resolve('Descuento Aplicado');
+} else {
+reject('No se pudo aplicar el descuento');
+}
+});
+// a)Crida a la promesa aplicarDescuento.
+aplicarDescuento.then (function (result){
+    console.log(result);
+    console.log (calculDescuento());
+}) .catch(function (error) {
+console.log(("error capturado"+ error));
+
+})*/
+// b)Recordar capturar l’error dins de la promesa: 'No se pudo aplicar el descuento'
+/*exemple suma 
+const calcula = new Promise(function (resolve, reject) {
+setTimeout(function () {
+const sum = 4 + 5 +"b";
+if (isNaN(sum)) {
+reject('Error while calculating sum.');
+} else {
+resolve(sum);
+}
+}, 2000);
+});
+//cridar la funcio com a promesa
+calcula.then(function (result) {
+console.log(result);
+}).catch(function (error) {
+console.log(error);
+});*/
+//crida a la funcio com a sincrona
+async function calcula() {
+let sum=0;
+setTimeout(function () {
+sum = 4 + 5;
+if (isNaN(sum)) {
+console.log('Error while calculating sum.');
+} else {
+console.log(sum);
+}
+}, 2000);
+};
+async function inici() {
+    await calcula();
+console.log(" crida a calcula acabada()");
+}
+inici();
+console.log("programa acabado");
+    </script>
+</body>
+</html>
