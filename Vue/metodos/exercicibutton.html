@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+</head>
+<body>
+   <!-- <div id="app"> </div>
+   <template id="ejemplo">
+
+        <div>
+            <span>{{ number }}</span>
+            <button v-on:click="number ++">sumar</button>
+            <button v-on:click="number --">restar</button>
+            <button v-on:click="reset">boton</button>
+            <button v-on:click="grett">Greet</button>
+            
+        </div>
+
+    </template>-->
+    <div id="app">
+        <button v-on:click="greet">Greet</button>
+    </div>
+   <script>
+       /* const app = new Vue({
+        el: "#app",
+        template: "#ejemplo",
+        data: {
+            number: 10,
+            name:"vue.js"
+
+        
+    },
+    methods: {
+
+        button: function () {
+               this.number=0;
+        }
+    },
+    });*/
+    var vm=new Vue ({
+        el: "#app",
+        data: {
+            name:"bruna"
+        },
+        methods: {
+            greet: function (event) {
+                alert("hello"+" "+ this.name)
+                alert(event.target.tagName)
+            }
+        }
+    })
+    </script>
+</body>
+</html>

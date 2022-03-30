@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <template id="ejemplo">
+        <div>
+          <label for="goal">Goal</label>
+          <input type="text" id="goal" v-model="enteredValue" />
+          <button v-on:click="addGoal">Add </button>
+        </div>
+        </template>
+
+        <script>
+            let vm = new Vue({
+            el: "#app",
+            template: "#ejemplo",
+            data: {
+               goals :[],
+               enteredValue: ""   
+        },
+        methods: {
+    
+            addGoal: function () {
+                    console.log(" He añadido "+ this.enteredValue);
+                    this.goals.push(this.enteredValue);
+                    this.enteredValue="";
+            }
+        }
+        });
+        </script>
+</body>
+</html>
