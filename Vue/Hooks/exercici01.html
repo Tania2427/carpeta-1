@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <p> {{mensaje}}</p>
+       
+        <p ref="fondo"></p>
+    </div>
+    <script>
+        var vm = new Vue({
+                    el: "#app",
+
+                    data: {
+                        mensaje: "Hola Mundo"
+                    },
+                    mounted() {
+                        console.log("***before mounted***");
+                    let divfondo= this.$refs.fondo;
+                    console.log (this.$refs.fondo);
+                   /*  divfondo.style.backgroundImage= "url('./imagen/1.jpg' )";
+                    divfondo.style.height="500px"
+                    divfondo.style.backgroundRepeat="no-repeat"; */
+                    console.log (document.body)
+                    document.body.style.background= "url('./imagen/2.jpeg')";
+                    
+                    }
+                    })
+    </script>
+</body>
+
+</html>

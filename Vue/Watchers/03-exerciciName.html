@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <p>FirstName: <input type="text" v-model="firstName" ></p>
+        <p>LastName: <input type="text" v-model="lastName" ></p>
+        <p>FullName: {{fullName}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: "#root",
+            data: {
+             firstName:"lorena",
+             lastName:"lowe",
+             fullName: ""
+            },
+            watch: {
+                firstName (newName, oldName){
+                    this.fullName=newName+""+oldName;
+                    console.log(this.fullName);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

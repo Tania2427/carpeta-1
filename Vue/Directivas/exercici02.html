@@ -9,18 +9,23 @@
 </head>
 <body>
     <div id="app">
-        <template id="ejemplo">
+       
         <div>
-          <label for="goal">Goal</label>
-          <input type="text" id="goal" v-model="Value" />
-          <button v-on:click="addGoal">Add </button>
+            <label for="goal">Goal</label>
+            <input type="text" id="goal" v-model="Value"/>
+          <button v-on:click="addGoal">Add Goal</button>
+    
+          </div>
+          <p v-if="goals.lenght === 0">no goals </p>
+             <ul v-else>
+                 <li v-for=" goal in goals ">{{ goal }}</li>
+             </ul>
         </div>
-        </template>
+
 
         <script>
             let variable = new Vue({
             el: "#app",
-            template: "#ejemplo",
             data: {
                goals :[],
                Value:""   
@@ -34,6 +39,6 @@
             }
         }
         });
-        </script>
+        </script> 
 </body>
 </html>

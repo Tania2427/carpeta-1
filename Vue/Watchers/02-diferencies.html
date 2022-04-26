@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+</head>
+
+<body>
+    <div id="noms">
+     <input type=" number " v-model.number="n1"><br />
+    <input type=" number " v-model.number="n2"><br/><br/>
+  
+
+        <!--computed-->
+        the sum()is: {{total}}<br/><br/>
+        <!-- method-->
+        <button @click="sum">sumar</button><br><br>
+        <!--watch-->
+    the sum2 is: {{suma2}}<br /><br />
+    </div>
+    <script>
+       var app=  new Vue({
+            el: "#noms",
+            data: {
+                n1: 0,
+                n2: 0,
+                suma1:0,
+                suma2: 0
+            },
+            watch: {
+                n1: function (valor) {
+                    this.suma1= +valor+ +this.n2
+                  },
+                  n2:function (valor){
+                      this.suma2=this.n1+ +this.n2
+                  },
+
+            },
+            computed: {
+                suma3: function () {
+                    return + this.n1 + +this.n2
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

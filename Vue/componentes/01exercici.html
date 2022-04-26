@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ name }}</h1>
+        <h3>{{ firstName}}- {{lastName }}</h3>
+        <h2>El primer botó esta a dins del objecte VUE </h2>
+        <!-- Cridem directamente al Objecte de VUE -->
+        <button @click="onAdd">{{ count }} boto objecte VUE</button>
+        <h2>El segon botó està fet amb un component </h2>
+        <!-- Cridem a un component de VUE -->
+        <my-button></my-button>
+        <my-button></my-button>
+        <user-detail></user-detail>
+
+    </div>
+    <script>
+       Vue.component('my-button', {
+
+            template: `
+       <div>
+        <button @click="onAdd2"> {{count}}boto component </button>
+          </div>
+`,
+            data() {
+
+                return {
+                    count: 0
+                }
+            },
+            methods: {
+                onAdd2() {
+                    this.count += 1
+                }
+            }
+        })
+     
+    </script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                name: 'Hola classe, això és un exemple de COMPONENT',
+                count: 0,
+            
+            },
+            methods: {
+                onAdd() {
+                    this.count += 1
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

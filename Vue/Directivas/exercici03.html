@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+    <div>
+      <div v-if="mostrar">
+        <b>{{mensaje}}</b>
+        <img :src="imagen" />
+      <p for v-for="(cursos, index) in cursos" :key= "index">
+        <a : href="curso.url">{{curso.name}}</a>
+      </p>
+    </div>
+    <button @click="toggleMostrar">mostrar/ocultar</button>
+  </div>
+</div>
+
+
+  <script>
+    const app = new Vue({
+      el: "#app",
+
+      data: {
+        cursos: [
+          {
+            name: "Historia y ventajas de trabajar con VUE",
+            url: "https://youtu.be/AqesL138vMA",
+          },
+          {
+            name: "Desarrolla aplicaciones con vueJs ",
+            url: "https://jdonsan.gitbooks.io/desarrolla-aplicaciones-con-vuejs/content/",
+          },
+          {
+            name: "Curso de VUE",
+            url: "https://styde.net/curso-de-vue-2/",
+          },
+        ],
+
+        mostrar: true,
+        mensaje: "Benvingut a VUE",
+        imagen: "imagen/vue.jpg",
+      },
+      methods: {
+        toggleMostrar: function () {
+          this.mostrar = !this.mostrar;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
